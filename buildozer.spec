@@ -20,7 +20,7 @@ version = 1.0.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,pyjnius,sqlite3
 
 # (str) Supported orientations
 # Valid values are: landscape, portrait, all
@@ -37,7 +37,7 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-# android.ndk = 25b
+android.ndk = 25b
 
 # (bool) Use private storage for data (needed for database storage)
 android.private_storage = True
