@@ -68,7 +68,14 @@ class AndroidSMSListener:
             # Store instance and register the broadcast receiver
             self.receiver = SMSReceiver(self.callback)
             filter = IntentFilter("android.provider.Telephony.SMS_RECEIVED")
-            self.context.registerReceiver(self.receiver, filter)
+            
+            # On Android 13/14+ (API 33+), we must specify Context.RECEIVER_EXPORTED (value 2) for dynamic receivers.
+            Build = autoclass('android.os.Build')
+            if Build.VERSION.SDK_INT >= 33:
+                self.context.registerReceiver(self.receiver, filter, 2)
+            else:
+                self.context.registerReceiver(self.receiver, filter)
+                
             print("Successfully registered Android SMS BroadcastReceiver!")
             
         except Exception as e:
