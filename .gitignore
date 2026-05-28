@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local SQLite databases
+*.db
+transactions.db
+
+# Buildozer and Android build directories
+.buildozer/
+bin/
+*.apk
+
+# Kivy configuration / logs
+.kivy/
+logs/
