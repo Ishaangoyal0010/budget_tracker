@@ -20,7 +20,7 @@ version = 1.0.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.10.14,kivy,pyjnius,sqlite3
+requirements = python3==3.10.14,hostpython3==3.10.14,kivy,pyjnius,sqlite3
 
 # (str) Supported orientations
 # Valid values are: landscape, portrait, all
@@ -38,6 +38,7 @@ android.minapi = 21
 
 # (str) Android NDK version to use
 android.ndk = 25b
+p4a.branch = develop
 
 # (bool) Use private storage for data (needed for database storage)
 android.private_storage = True
@@ -58,7 +59,7 @@ android.private_storage = True
 # android.copy_libs = 1
 
 # (list) The Android archs to build for
-android.archs = armeabi-v7a, arm64-v8a
+android.archs = arm64-v8a
 
 [buildozer]
 
