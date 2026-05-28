@@ -43,7 +43,7 @@ android.ndk = 25b
 android.private_storage = True
 
 # (list) List of service to declare (leave empty if none)
-services = 
+# services = 
 
 # (str) Icon of the application
 # icon.filename = %(source.dir)s/icon.png
