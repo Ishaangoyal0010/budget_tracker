@@ -45,8 +45,9 @@ jobs:
     - name: Install Pip Packages (Buildozer & Cython)
       run: |
         python -m pip install --upgrade pip
+        python -m pip cache purge
         # Pin Cython to < 3.0 to prevent Kivy build failures
-        pip install "cython<3.0" virtualenv buildozer
+        pip install --upgrade "cython<3.0" virtualenv buildozer
 
     - name: Build Android APK
       run: |
