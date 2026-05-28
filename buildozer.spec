@@ -38,7 +38,7 @@ android.minapi = 21
 
 # (str) Android NDK version to use
 android.ndk = 25b
-p4a.branch = develop
+# p4a.branch = develop
 
 # (bool) Use private storage for data (needed for database storage)
 android.private_storage = True
